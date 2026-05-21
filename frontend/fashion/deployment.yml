@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fashion
-        image: 261513860477.dkr.ecr.us-east-1.amazonaws.com/shopping-site-fashion:dbc68048cbc3b5df09ad5b2b6ed907ba7b27d6be
+        image: 261513860477.dkr.ecr.us-east-1.amazonaws.com/shopping-site-fashion:3b4e70a83144fe6837049bf1fef10e9b5d1f6c02
         ports:
         - containerPort: 80
 ---
