@@ -16,7 +16,7 @@ provider "aws" {
 ############################
 
 variable "cluster_version" {
-  default = "1.35"
+  default = "1.31"
 }
 
 ############################
@@ -315,15 +315,15 @@ resource "aws_instance" "eks" {
                 yum update -y
 
                 # ----------------------------- Install kubectl -----------------------------
-                curl -o /tmp/kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
-                chmod +x /tmp/kubectl
-                mv /tmp/kubectl /usr/local/bin/kubectl
+                curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+                chmod +x kubectl
+                mv kubectl /usr/local/bin/
 
                 # Verify kubectl
                 kubectl version --client || true
 
                 # ----------------------------- Install eksctl -------------------------------
-                curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" \
+                curl --silent --location "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" \
                 | tar xz -C /tmp
 
                 mv /tmp/eksctl /usr/local/bin/eksctl
