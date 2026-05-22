@@ -427,3 +427,7 @@ resource "aws_eks_addon" "ebs_csi" {
     aws_eks_pod_identity_association.ebs_csi
   ]
 }
+ # Change AMI 
+ # attach IAM Role : EC2 ADMIN
+ # After running the terraform code, run the below command
+ # aws eks update-kubeconfig --region us-east-1 --name naresh
