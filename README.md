@@ -6,9 +6,12 @@ This README provides end-to-end steps for installing **eksctl**, **kubectl**, **
 
 ### Workflow Diagram
 
-![Workflow Diagram](p1.png)
+<img width="3652" height="1816" alt="IMG_20260630_213533" src="https://github.com/user-attachments/assets/9ac17691-e54f-4b16-a446-c2737e6251f4" />
+<img width="1047" height="582" alt="image" src="https://github.com/user-attachments/assets/8645719d-872e-4440-9e83-49c9b5a70538" />
 
-![Workflow Diagram](p2.png)
+
+
+
 
 ## Prerequisites
 
